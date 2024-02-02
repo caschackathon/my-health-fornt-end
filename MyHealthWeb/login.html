@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>My Health</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            background-color: #35C9A5;
+        }
+
+        .Login {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(217, 217, 217, 10%);
+            z-index: 100;
+            display: inline-block;
+            border-radius: 20px;
+            box-shadow: 1px 1px 2px #ffffff88;
+        }
+
+        form {
+            background-color: transparent;
+            backdrop-filter: blur(100);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin: 30px;
+           
+        }
+
+        form button {
+            font-size: 18px;
+            width: 90%;
+            font-weight: 700;
+            border: none;
+            border-radius: 20px;
+            border-color: #2391ff;
+            background-color: #2391ff;
+            padding: 8px;
+            margin-bottom: 8px;
+            color: white;
+        }
+
+      
+
+        input {
+            border-radius: 20px;
+            border: none;
+            background-color: rgba(217, 217, 217, 30%);
+            font-size: larger;
+            padding: 8px;
+            margin: 10px;
+        }
+
+  
+
+        input::placeholder {
+            color: white;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="Login">
+        <form>
+            <input placeholder="Name" type="text" required>
+           
+            <input placeholder="Password" type="password" required>
+            <button type="submin">LOGIN</button>
+            <p>Not a member <a href="#">Create account</a></p>
+        </form>
+    </section>
+</body>
+
+</html>
