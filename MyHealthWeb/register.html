@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
     <title>My Health</title>
     <style>
         * {
@@ -13,7 +12,7 @@
             background-color: #35C9A5;
         }
 
-        .Login {
+        .sign-in {
             position: absolute;
             left: 50%;
             top: 50%;
@@ -22,7 +21,7 @@
             z-index: 100;
             display: inline-block;
             border-radius: 20px;
-            box-shadow: 1px 1px 2px #ffffff88;
+
         }
 
         form {
@@ -30,55 +29,80 @@
             backdrop-filter: blur(100);
             z-index: 1000;
             display: flex;
-            align-items: center;
             flex-direction: column;
             margin: 30px;
-           
         }
 
         form button {
-            font-size: 18px;
-            width: 90%;
+            font-size: 25px;
             font-weight: 700;
             border: none;
             border-radius: 20px;
             border-color: #2391ff;
             background-color: #2391ff;
-            padding: 8px;
-            margin-bottom: 8px;
+            padding: 10px;
             color: white;
         }
 
-      
+        .sign-in .indi div,
+        .sign-in .indi div h3,
+        .indi {
+            background-color: transparent;
 
+
+        }
+
+        .sign-in .indi div h3 {
+            transform: translateY(5px);
+        }
+        .sign-in{
+            width: 600px;
+            scale: .9;
+        }
         input {
             border-radius: 20px;
             border: none;
             background-color: rgba(217, 217, 217, 30%);
             font-size: larger;
-            padding: 8px;
+            padding: 12px;
             margin: 10px;
         }
 
-  
+        h3 {
+            color: #fff;
+            font-size: larger;
+        }
 
         input::placeholder {
             color: white;
             font-weight: 200;
+
+        }
+
+        form div {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        legend{
+            background: none;
+            text-align: center;
+            font-size: 40px;
+            color: rgba(0, 0, 0, 0.877);
         }
     </style>
 </head>
 
 <body>
-    <section class="Login">
+    <section class="sign-in">
         <form method="post">
+            <legend>Signup</legend>
             {% csrf_token %}
-            <input placeholder="Name" name="uname" type="text" required>
+            <input placeholder="Name" type="text" name="name" required>
+            <input placeholder="E-mail" name="email" type="email" required>
             <input placeholder="Password" name="password" type="password" required>
-            <input type="submit">
-            <p>Not a member <a href={% url "user_auth:register" %}>Create account</a></p>
+            <button>Signup</button>
         </form>
     </section>
 </body>
-
 </html>
